@@ -2,13 +2,10 @@
 
 CREATE DATABASE strintmodulo;
 
-CREATE TABLE usuarios (
-  id_usuario INT AUTO_INCREMENT  PRIMARY KEY NOT NULL,
-  nombre VARCHAR(50) NOT NULL,
-  apellido VARCHAR(50) NOT NULL,
-  contraseña VARCHAR(100) NOT NULL,
-  telefono_contacto INT
-);
+CREATE USER 'nombre_de_usuario'@'localhost' IDENTIFIED BY 'contraseña';
+GRANT ALL PRIVILEGES ON strintmodulo TO 'nombre_de_usuario'@'localhost';
+FLUSH PRIVILEGES;
+
 
 CREATE TABLE proveedores (
   id_proveedor INT AUTO_INCREMENT PRIMARY KEY,
